@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taskgram - Simple to do list</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li id="logo"><span>Tas<span>kg</span>ram</span></li>
+            <li><a href="#activetask">Active Task</a></li>
+            <li><a href="#completed">Completed</a></li>
+            <li><a href="#archive">Archive</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="content">
+        <article id="activetask">
+            <h2>Active Task <span id="active_task_total">(0)</span>
+                <button id="btn-clear-activetask"
+                        class="button button-black button-radius">Clear
+                </button>
+            </h2>
+
+            <div class="flex-column" id="dummy-data-notice">
+                <div class="flex-row">
+                    <div class="box box-4">
+                        <strong><i>Data masih kosong, <span style="text-decoration: line-through;">gunawan</span>
+                            gunakan data</i> dummy? </strong>
+                        <button class="button button-shadow" id="btn-use-dummy"><i>Gunakan</i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-column" id="task-list">
+                <!--BEGIN LOOPING-->
+                <!--                <div class="flex-row card">-->
+                <!--                    <div class="box box-2">-->
+                <!--                        <p class="task-title">Title Task in Here Again again and again, Title Task in Here Again again-->
+                <!--                            and again</p>-->
+                <!--                    </div>-->
+                <!--                    <div class="box ">-->
+                <!--                        <p class="task-date">26 April 2020</p>-->
+                <!--                    </div>-->
+                <!--                    <div class="box">-->
+                <!--                        <button onclick="moveToCompleted(99)"-->
+                <!--                                class="button button-secondary button-circle" title="Done">&#10004;-->
+                <!--                        </button>-->
+                <!--                        <button class="button button-circle button-secondary button-warning" title="Archive">&#11088;-->
+                <!--                        </button>-->
+                <!--                        <button onclick="removeTask(99)"-->
+                <!--                                class="button button-circle button-secondary button-danger" title="Remove">&#10005;-->
+                <!--                        </button>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--END LOOPING-->
+
+            </div>
+
+        </article>
+
+        <article id="completed">
+            <h2>Completed <span id="completed_task_total">(0)</span>
+                <button id="btn-clear-completedtask"
+                        class="button button-black button-radius">Clear
+                </button>
+            </h2>
+            <div class="flex-column" id="completed-task-list">
+
+            </div>
+        </article>
+
+        <article id="archive">
+            <h2>Archive <span id="archive_tasks_total">(0)</span></h2>
+            <div class="flex-column" id="archive-tasks-list">
+
+            </div>
+        </article>
+
+        <button class="button-float" id="btn-new-task">&#10010; New Task</button>
+    </div>
+
+    <aside>
+        <article class="profile card">
+            <header>
+                <h2>Teguh's Profile</h2>
+                <!--<p>Kota Kembang Paris van Java</p>-->
+                <figure>
+                    <img src="https://i1.rgstatic.net/ii/profile.image/692342499594243-1542078723741_Q512/Teguh_Siswanto.jpg"
+                         class="photo"
+                         alt="Foto Masih SMP">
+                    <figcaption><b>Teguh Siswanto</b></figcaption>
+                </figure>
+            </header>
+            <section>
+                <!--<h3>Informasi Lainnya</h3>-->
+                <table>
+                    <tr class="quote">
+                        <td colspan="2">
+                            <q>When you focus on You <br>
+                                You Grow<br>
+                                When you focus on Shit<br>
+                                Shit Grow<br>
+                                Read that again.</q>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Born</th>
+                        <td>11 September 2000</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>Sarwendah IV A</td>
+                    </tr>
+                    <tr>
+                        <th>Contact</th>
+                        <td title="Available Whatapps, Telegram, and Phone">+6289 9697 6185</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/tsiswanto87/" target="_blank" class=""
+                           title="Open New Tab">
+                            <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png" alt="IG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/tsiswanto11" target="_blank" class="" title="Open New Tab">
+                            <img src="https://img.icons8.com/material-outlined/24/000000/twitter-squared.png" alt="TW"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/teguhsiswanto87" target="_blank" class="" title="Open New Tab">
+                            <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GH"/>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="info card">
+
+            <div id="div-info-apatadi" style="display: none">
+                <h1><i>Terima Kasih</i></h1>
+                <button class="button button-radius" id="btn-info-apatadi"><i>Apa Tadi</i></button>
+            </div>
+
+            <div id="div-info-okay">
+                <h3><i>Buka menggunakan </i>Firefox</h3>
+                <p><i>Tampilan website tampak lebih baik pada</i> <b>Mozilla Firefox</b> <i>dibandingkan dengan</i>
+                    Browser <i>lain</i>.</p>
+                <button class="button button-radius" id="btn-info-okay">Okay</button>
+            </div>
+        </article>
+    </aside>
+
+</main>
+
+<footer>
+    <p>Submission Dicoding Belajar Dasar Pemrograman Web 2020</p>
+</footer>
+
+<script src="assets/js/dummyData.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

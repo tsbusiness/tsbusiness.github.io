@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FAFAFA;
+}
+
+header {
+    display: inline;
+}
+
+main {
+    padding: 20px 40px;
+    overflow: auto;
+    background-color: #FAFAFA;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+nav {
+    padding: 1px;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav li a {
+    padding: 20px 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #FAFAFA;
+    border-bottom: 5px solid #6200EE;
+}
+
+article {
+    width: 100%;
+}
+
+article h2 {
+    font-variant: all-petite-caps;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    flex-basis: 25%;
+    /*background-color: #00a2c6;*/
+    /*background-color: cornflowerblue;*/
+    /*border: 1px solid black;*/
+    padding: 10px 20px;
+    /*text-align: center;*/
+    /*color: white;*/
+    font-size: 1.2em;
+}
+
+.box-2 {
+    flex-basis: 50%;
+}
+
+.box-3 {
+    flex-basis: 75%;
+}
+
+.box-4 {
+    flex-basis: 100%;
+}
+
+.task-title {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.task-date {
+    color: #607D8B;
+    text-align: center;
+}
+
+.card {
+    background-color: #FFFFFF;
+    /*padding: 1.4rem;*/
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .07);
+    /*-ms-flex: 0 1 49%;*/
+    /*flex: 0 1 49%;*/
+    margin: 8px 0;
+}
+
+.button {
+    background: #31b057;
+    padding: 4px 12px;
+    float: right;
+    margin: 5px;
+    font-weight: bold;
+    font-size: .8em;
+    /*border: 1px solid #fff;*/
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+.button:hover {
+    box-shadow: 0 20px 10px -15px rgba(0, 0, 0, 0.2);
+    transform: translate(0px, -4px);
+}
+
+.button-shadow {
+    box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+}
+
+.box .button-circle {
+    padding: 8px 12px;
+    font-size: .9em;
+}
+
+.button-secondary {
+    color: #31b057;
+    background: #FFFFFF;
+    border: 1px solid #31b057;
+}
+
+.button-black {
+    color: #F7F7F7;
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+.button-danger {
+    color: #F44336;
+    border-color: #F44336;
+}
+
+.button-yellow {
+    color: #FFEB3B;
+    border-color: #FFEB3B;
+}
+
+.button-grey {
+    color: #607D8B;
+    border-color: #607D8B;
+}
+
+.button-warning {
+    color: #FFC107;
+    border-color: #FFC107;
+}
+
+.button-radius {
+    border-radius: 10px;
+}
+
+.button-round {
+    border-radius: 20px;
+}
+
+.button-circle {
+    border-radius: 50%;
+}
+
+.button-float {
+    border: none;
+    position: fixed;
+    border-radius: 2px 30px 30px 30px;
+    width: 25%;
+    height: 45px;
+    bottom: 24px;
+    font-weight: bold;
+    left: 25%;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #6200EE;
+    color: #FFF;
+    text-align: center;
+    box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 300ms;
+}
+
+.button-float:hover {
+    box-shadow: 0 37px 20px -15px rgba(0, 0, 0, 0.2);
+    transform: translate(0px, -10px);
+}
+
+.label {
+    background-color: #31b057;
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.label-secondary {
+    background-color: #607D8B;
+}
+
+#btn-clear-activetask, #btn-clear-completedtask {
+    font-size: 16px;
+
+}
+
+#dummy-data-notice strong {
+    color: #BDBDBD;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+#dummy-data-notice button {
+    background-color: #6200EE;
+    font-size: 0.9em;
+    border-radius: 4px;
+    border-style: none;
+    margin: .5em;
+    text-transform: uppercase;
+    float: none;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+
+    main {
+        padding-top: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.profile {
+    padding: 16px;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile .photo {
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .profile .photo {
+        width: 160px;
+    }
+
+    .profile header figure {
+        margin: 0;
+    }
+}
+
+.profile table {
+    width: 100%;
+}
+
+.profile table tr th {
+    padding: 5px 0;
+    text-align: left;
+}
+
+.profile table tr td {
+    text-align: right;
+}
+
+.profile .quote th {
+    vertical-align: top;
+}
+
+.profile .quote td {
+    text-align: center;
+    padding: 12px 0;
+    color: #607D8B;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.profile section {
+    margin-bottom: 16px;
+}
+
+.profile section ul {
+    width: 100%;
+    padding: 0;
+}
+
+.profile section ul li {
+    display: inline;
+}
+
+.profile section a {
+    text-decoration: none;
+}
+
+.profile section ul li a img {
+    margin: 0 12px;
+    transition: all ease-in-out 200ms;
+}
+
+.profile section ul li a img:hover {
+    box-shadow: 0 20px 10px -15px rgba(0, 0, 0, 0.2);
+    transform: translate(0px, -4px);
+}
+
+.info {
+    padding: 8px 20px 20px 20px;
+    text-align: left;
+    overflow: auto;
+    margin-top: 24px;
+}
+
+.info button {
+    font-size: 1em;
+}
+
+#logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#logo span {
+    text-shadow: 1px 1px 0 #fff, 1px 1px 0 rgba(0, 0, 0, 0.15), 2px 2px 0 rgba(0, 0, 0, 0.3);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#logo span span {
+    font-size: 26px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: right;
+    font-weight: 600;
+    border-top: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 540px) {
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .profile .photo {
+        width: 300px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .button-float {
+        width: 50%;
+    }
+
+    footer {
+        padding-bottom: 70px;
+    }
+}
+
